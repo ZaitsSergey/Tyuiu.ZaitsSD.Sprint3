@@ -6,11 +6,12 @@ namespace Tyuiu.ZaitsSD.Sprint3.Task7.V25.Lib
         public double[] GetMassFunction(int startValue, int stopValue)
         {
             int Len_List = stopValue - startValue + 1;
+            int Element_Massiv = 0;
             double[] res = new double[Len_List];
-            for (int i = 0; i < res.Length; i++)
+            for (int i = startValue; i <= stopValue; i++)
             {
-                int x = startValue + i;
-                res[i] = Math.Round(Math.Cos(x) + 4.0 * x / 2 - Math.Sin(x) * 3 * x, 2);
+                res[Element_Massiv] = Math.Round(Math.Cos(i) + 4 * i / 2 - (Math.Sin(i) * 3 * i),2);
+                Element_Massiv ++;
             }
             return res;
         }
